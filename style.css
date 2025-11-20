@@ -466,3 +466,107 @@ main {
 .gallery-item:hover {
   transform: scale(1.03);
 }
+
+@media (max-width: 768px) {
+
+  /* Fix NAV spacing on mobile */
+  .navbar {
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  /* HERO section stacks vertically */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin: 100px auto 60px auto;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-photo img {
+    width: 250px;
+    height: auto;
+  }
+
+  /* ABOUT PAGE */
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin: 100px auto;
+  }
+
+  .about-content {
+    max-width: 90%;
+  }
+
+  /* WORK PAGE */
+  .work-section {
+    padding: 10px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .work-card {
+    padding: 16px;
+  }
+
+  /* PROJECT PAGE */
+  .project-page {
+    margin: 100px auto 60px auto;
+    padding: 15px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-description {
+    font-size: 15px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-section {
+    margin: 100px auto;
+    padding: 15px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+}
+
+/* Even smaller screens: iPhone SE, older devices */
+@media (max-width: 480px) {
+  .hero-photo img {
+    width: 200px;
+  }
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
