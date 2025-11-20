@@ -70,22 +70,50 @@
         <h2>Sample Work</h2>
 
         <div class="project-gallery-grid">
-          <!-- Image 1 -->
-          <img src="Election outcome instagram post.png" alt="Election coverage Instagram post for KBIA">
+          <!-- Clickable Project 1 -->
+          <div class="gallery-item" onclick="openModal('modal1')">
+            <img src="Election outcome instagram post.png" alt="Election coverage Instagram post for KBIA">
+          </div>
 
-          <!-- Image 2 -->
-          <img src="Final Audience Strategy Project.jpg" alt="KBIA Reels strategy slide for Instagram">
+          <!-- Clickable Project 2 -->
+          <div class="gallery-item" onclick="openModal('modal2')">
+            <img src="Final Audience Strategy Project.jpg" alt="KBIA Reels strategy slide for Instagram">
+          </div>
         </div>
-
-        <!-- Link to full presentation -->
-        <p style="margin-top: 20px;">
-          <a href="https://www.canva.com/design/DAGl-wqBaEE/r9KAhQEEcyD2iARLKXDD3A/edit?utm_content=DAGl-wqBaEE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-             target="_blank"
-             style="color:#a78bfa; font-weight:600; text-decoration:none;">
-            View full presentation →
-          </a>
-        </p>
       </section>
+
+      <!-- MODAL 1: Election post -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <img src="Election outcome instagram post.png" alt="Election coverage Instagram post for KBIA">
+          <p class="modal-description">
+            Instagram coverage created for KBIA’s election night reporting, designed to provide quick,
+            visual updates on results, voter reactions, and key local takeaways for audiences following
+            along on social media.
+          </p>
+        </div>
+      </div>
+
+      <!-- MODAL 2: Presentation slide + link to full deck -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <img src="Final Audience Strategy Project.jpg" alt="KBIA Reels strategy slide for Instagram">
+          <p class="modal-description">
+            Slide from my KBIA audience and Instagram Reels strategy presentation, outlining growth
+            opportunities, best practices for audio storytelling on social, and recommendations for
+            integrating Reels into the newsroom’s existing workflows.
+            <br><br>
+            <a
+              href="https://www.canva.com/design/DAGl-wqBaEE/r9KAhQEEcyD2iARLKXDD3A/edit?utm_content=DAGl-wqBaEE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              target="_blank"
+              class="modal-link">
+              View the full presentation →
+            </a>
+          </p>
+        </div>
+      </div>
 
     </section>
   </main>
@@ -95,7 +123,16 @@
     <p>Website by Maggie Bunch.</p>
   </footer>
 
+  <!-- MODAL SCRIPT -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
-
-
